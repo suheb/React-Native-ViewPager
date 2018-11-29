@@ -17,7 +17,7 @@ declare module 'rn-viewpager' {
       setPageWithoutAnimation(selectedPage: number): void;
     }
 
-    interface IndicatorViewPagerProps extends ViewProperties {
+    interface IndicatorViewPagerProps extends ViewPagerProps {
       indicator: React.ReactNode;
       pagerStyle?: ViewProperties['style'];
       autoPlayEnable?: boolean;
@@ -30,7 +30,7 @@ declare module 'rn-viewpager' {
       setPageWithoutAnimation(selectedPage: number): void;
     }
 
-    interface PagerDotIndicatorProps extends ViewProperties {
+    interface PagerDotIndicatorProps extends ViewPagerProps {
       pageCount: number;
       dotStyle?: ViewProperties['style'];
       selectedDotStyle?: ViewProperties['style'];
@@ -39,7 +39,7 @@ declare module 'rn-viewpager' {
 
     export class PagerDotIndicator extends React.Component<PagerDotIndicatorProps> {}
 
-    interface PageTitleIndicatorProps extends ViewProperties {
+    interface PageTitleIndicatorProps extends ViewPagerProps {
       titles: string[];
       trackScroll?: boolean;
       itemStyle?: ViewProperties['style'];
@@ -50,7 +50,7 @@ declare module 'rn-viewpager' {
     }
     export class PagerTitleIndicator extends React.Component<PageTitleIndicatorProps> {}
 
-    interface PagerTabIndicatorProps extends ViewProperties {
+    interface PagerTabIndicatorProps extends ViewPagerProps {
       tabs: Array<{
         text: string,
         iconSource: ImageURISource,
